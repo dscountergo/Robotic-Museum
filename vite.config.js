@@ -13,12 +13,14 @@ export default defineConfig({
       },
       external: [],
       output: {
-        manualChunks: {
-          three: ['three']
-        }
+        format: 'es',
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     },
-    copyPublicDir: true
+    copyPublicDir: true,
+    target: 'es2015'
   },
   server: {
     port: 3000,
@@ -38,6 +40,6 @@ export default defineConfig({
     global: 'globalThis'
   },
   esbuild: {
-    target: 'es2020'
+    target: 'es2015'
   }
 }) 
