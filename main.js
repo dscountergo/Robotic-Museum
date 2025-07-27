@@ -43,12 +43,12 @@ function toggleInstructionImage() {
 
     if (isInstructionImageDefault) {
 
-        instructionImage.src = 'public/images/E.png';  
+        instructionImage.src = '/public/images/E.png';  
         instructionImage.style.width = 'auto';  
         instructionImage.style.height = '50px'; 
     } else {
 
-        instructionImage.src = 'public/images/controls.png';  
+        instructionImage.src = '/public/images/controls.png';  
         instructionImage.style.width = 'auto';  
         instructionImage.style.height = '175px'; 
     }
@@ -57,13 +57,13 @@ function toggleInstructionImage() {
 }
 
 const modelsToLoad = [
-    { path: 'public/models/scene.glb', name: 'Scena_Root', delay: 6000 },
-    { path: 'public/models/Doors.glb', name: 'doors', relativeTo: 'drzwi', offset: new THREE.Vector3(-0.25, -1.7, 0), delay: 6000 },
-    { path: 'public/models/Traitor.glb', name: 'traitor', relativeTo: 'zdrada', offset: new THREE.Vector3(0, 0.175, 0), delay: 1000 },
-    { path: 'public/models/Stress.glb', name: 'Stress', relativeTo: 'czlowiek', offset: new THREE.Vector3(0, 0, 0), delay: 1000 },
-    { path: 'public/models/Prison.glb', name: 'Prison', relativeTo: 'wiezien', offset: new THREE.Vector3(0, 0.175, 0), delay: 1000 },
-    { path: 'public/models/Apollo.glb', name: 'Space_Mission', relativeTo: 'apollo', offset: new THREE.Vector3(0, 0.175, 0), delay: 1000 },
-    { path: 'public/models/Drone.glb', name: 'Drone', relativeTo: 'dron', offset: new THREE.Vector3(6, 0, 0), delay: 1000 },
+    { path: '/models/scene.glb', name: 'Scena_Root', delay: 6000 },
+    { path: '/models/Doors.glb', name: 'doors', relativeTo: 'drzwi', offset: new THREE.Vector3(-0.25, -1.7, 0), delay: 6000 },
+    { path: '/models/Traitor.glb', name: 'traitor', relativeTo: 'zdrada', offset: new THREE.Vector3(0, 0.175, 0), delay: 1000 },
+    { path: '/models/Stress.glb', name: 'Stress', relativeTo: 'czlowiek', offset: new THREE.Vector3(0, 0, 0), delay: 1000 },
+    { path: '/models/Prison.glb', name: 'Prison', relativeTo: 'wiezien', offset: new THREE.Vector3(0, 0.175, 0), delay: 1000 },
+    { path: '/models/Apollo.glb', name: 'Space_Mission', relativeTo: 'apollo', offset: new THREE.Vector3(0, 0.175, 0), delay: 1000 },
+    { path: '/models/Drone.glb', name: 'Drone', relativeTo: 'dron', offset: new THREE.Vector3(6, 0, 0), delay: 1000 },
 ];
 
 const degreesToRadians = (degrees) => degrees * (Math.PI / 180);
