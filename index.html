@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<img id="instruction-image" src="/public/images/controls.png" alt="Instruction" style="display: none;" /> <!-- Ukrywamy obrazek początkowo -->
+	<img id="instruction-image" src="public/images/controls.png" alt="Instruction" style="display: none;" /> <!-- Ukrywamy obrazek początkowo -->
 
     <!-- Ekran ładowania -->
     <div id="loading-screen">
@@ -29,13 +29,13 @@
 
         function setRandomGif() {
             const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
-            const gifPath = `/public/images/gifs/${randomGif}`; 
+            const gifPath = `public/images/gifs/${randomGif}`; 
             document.getElementById('loading-gif').src = gifPath;
         }
 
         setRandomGif();
     </script>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

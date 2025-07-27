@@ -99,7 +99,7 @@ export class EventManager {
                         return;
                     }
 
-                    this.playSoundAndWaitForCompletion('../public/sounds/Doors.mp3');
+                    this.playSoundAndWaitForCompletion('public/sounds/Doors.mp3');
 
                     if (event.executed % 2 === 0) {
                         animationController.stopAtEnd('doors', 'Take 001');
@@ -138,7 +138,7 @@ export class EventManager {
                         return;
                     }
 
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Welcome.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Welcome.mp3');
 
                     this.isEventInProgress = false; 
                 },
@@ -177,10 +177,10 @@ export class EventManager {
                     const spot = this.scene.getObjectByName('traitor');;
                     await flyTo(drone, drone, pointB, 5);
                     turnOnSpotlight(this.scene, spot);
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
 
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Traitor.mp3');
-                    this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Traitor.mp3');
+                    this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
                     turnOffSpotlight(this.scene);
 
 
@@ -218,10 +218,10 @@ export class EventManager {
                     const spot = this.scene.getObjectByName('Space_Mission');
                     await flyTo(drone, drone, pointB, 5);
                     turnOnSpotlight(this.scene, spot);
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
 
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Apollo.mp3');                    
-                    this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Apollo.mp3');                    
+                    this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
                     turnOffSpotlight(this.scene);
 
                     this.isEventInProgress = false; 
@@ -258,9 +258,9 @@ export class EventManager {
                     const spot = this.scene.getObjectByName('Prison');
                     await flyTo(drone, drone, pointB, 5);
                     turnOnSpotlight(this.scene, spot);
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Prison.mp3');
-                    this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Prison.mp3');
+                    this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
                     turnOffSpotlight(this.scene);
 
 
@@ -298,10 +298,10 @@ export class EventManager {
                     const spot = this.scene.getObjectByName('Stress');
                     await flyTo(drone, drone, pointB, 5);
                     turnOnSpotlight(this.scene, spot);
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
 
-                    await this.playSoundAndWaitForCompletion('../public/sounds/Stress.mp3');
-                    this.playSoundAndWaitForCompletion('../public/sounds/Spotlight.mp3');
+                    await this.playSoundAndWaitForCompletion('public/sounds/Stress.mp3');
+                    this.playSoundAndWaitForCompletion('public/sounds/Spotlight.mp3');
                     turnOffSpotlight(this.scene);
 
 
@@ -342,7 +342,7 @@ export class EventManager {
         const currentTime = Date.now();
 
         if (!this.backgroundSound || !this.backgroundSound.isPlaying) {
-            this.playBackgroundSound('../public/sounds/BG.mp3');
+            this.playBackgroundSound('public/sounds/BG.mp3');
         }
 
         if (this.isWaitingForFlight || this.isEventInProgress) return; 
